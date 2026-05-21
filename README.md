@@ -9,6 +9,22 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Gemini API](https://img.shields.io/badge/Google_Gemini-2.0-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
 
+<br/>
+
+<p align="center">
+  <a href="#-getting-started">
+    <img src="https://img.shields.io/badge/🚀%20Get%20Started-4285F4?style=for-the-badge" alt="Get Started" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/Anshul253/Techify-app/issues/new">
+    <img src="https://img.shields.io/badge/🐛%20Report%20Bug-d73a4a?style=for-the-badge" alt="Report Bug" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/Anshul253/Techify-app/issues/new">
+    <img src="https://img.shields.io/badge/✨%20Request%20Feature-009688?style=for-the-badge" alt="Request Feature" />
+  </a>
+</p>
+
 </div>
 
 ---
