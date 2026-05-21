@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── CSS Variables for Theming ─────────────────────────────────────────────────── */
+:root {
+  --obsidian-900: #f4f4f9;
+  --obsidian-800: #ffffff;
+  --obsidian-700: #e2e8f0;
+  --neon-cyan: #0284c7;
+  --neon-purple: #9333ea;
+  
+  --background: var(--obsidian-900);
+  --foreground: #0f172a;
+
+  --shadow-neon-cyan: 0 4px 6px -1px rgba(2, 132, 199, 0.1), 0 2px 4px -1px rgba(2, 132, 199, 0.06);
+  --shadow-neon-purple: 0 4px 6px -1px rgba(147, 51, 234, 0.1), 0 2px 4px -1px rgba(147, 51, 234, 0.06);
+  --bg-cosmic: radial-gradient(ellipse at top right, #e2e8f0, #f4f4f9);
+}
+
+.dark {
+  --obsidian-900: #050505;
+  --obsidian-800: #0f0f13;
+  --obsidian-700: #1a1a24;
+  --neon-cyan: #00f0ff;
+  --neon-purple: #bf00ff;
+  
+  --background: var(--obsidian-900);
+  --foreground: #e2e8f0;
+
+  --shadow-neon-cyan: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+  --shadow-neon-purple: 0 0 10px rgba(191, 0, 255, 0.5), 0 0 20px rgba(191, 0, 255, 0.3);
+  --bg-cosmic: radial-gradient(ellipse at top right, #1a1a24, #050505);
+}
+
+/* ── Custom theme tokens (Tailwind v4 CSS-first config) ─────────────────── */
+@theme {
+  --color-obsidian-900: var(--obsidian-900);
+  --color-obsidian-800: var(--obsidian-800);
+  --color-obsidian-700: var(--obsidian-700);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-purple: var(--neon-purple);
+  --color-neon-pink: #ff007f;
+
+  --shadow-neon-cyan: var(--shadow-neon-cyan);
+  --shadow-neon-purple: var(--shadow-neon-purple);
+
+  --background-image-cosmic-gradient: var(--bg-cosmic);
+}
+
+/* ── Global base styles ──────────────────────────────────────────────────── */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: inherit;
+}
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+  border-left: 1px solid #1a1a24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a24;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}

@@ -1,0 +1,50 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/react-toast": "^1.2.6",
+    "@react-oauth/google": "^0.13.5",
+    "@react-pdf/renderer": "^4.3.0",
+    "axios": "^1.8.2",
+    "chart.js": "^4.4.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "docx": "^9.2.0",
+    "flask": "^0.2.10",
+    "framer-motion": "^12.39.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.0",
+    "lucide-react": "^0.479.0",
+    "next": "15.2.1",
+    "next-themes": "^0.4.6",
+    "pdfjs-dist": "^3.9.179",
+    "radix-ui": "^1.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sonner": "^2.0.1",
+    "tailwind-merge": "^3.0.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
