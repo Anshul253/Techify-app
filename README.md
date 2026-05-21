@@ -1,91 +1,125 @@
-# 📊 Excute - Resume Generation Project
- 
-This project focuses on building a Resume Generation Model integrated with a chatbot interface inspired by ChatGPT. Users interact with the chatbot by answering 10 guided questions to generate a professional resume. The application is built with Next.js and Tailwind CSS for the frontend, and FastAPI for the backend.
+<div align="center">
+
+# 🚀 Techify
+
+**The ultimate AI-powered career growth and resume building platform.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Gemini API](https://img.shields.io/badge/Google_Gemini-2.0-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
+
+</div>
 
 ---
- 
-## 🚀 Features
-- 📂 **Conversational Resume Builder:** A chatbot interface that interacts with users to collect resume details through 10 questions.
-- 🌐 **Frontend Framework:** Built using Next.js for high performance and SEO optimization.
-- 🎨 **Styling with Tailwind CSS:** Provides a sleek and responsive design.
-- ⚙️ **Backend API:** FastAPI to process user inputs and generate resumes.
-- 📱 **Responsive Design:** Optimized for both desktop and mobile views.
-- 📄 **Export Option:** Option to download generated resume in preferred formats (Future Work).
+
+## ✨ Overview
+
+**Techify** is a comprehensive, modern platform designed to help job seekers craft the perfect resume and land their dream jobs. By leveraging advanced NLP models and the power of Google's Gemini AI, Techify acts as your personal career assistant—optimizing your resume to beat Applicant Tracking Systems (ATS), generating tailored content, and providing professional templates.
+
+## 🌟 Key Features
+
+### 🤖 AI Conversational Resume Builder
+Don't know where to start? Chat with our intelligent Gemini-powered agent. Just describe your experience in natural language, and Techify will automatically generate structured, professional resume sections including a tailored summary, impactful bullet points, and skills.
+
+### 📊 Deep ATS Scanner & Matcher
+Upload your existing resume (PDF) alongside a Job Description. Techify performs a multi-dimensional analysis evaluating:
+- **Keyword Density & Match Score**
+- **Action Verb Usage**
+- **Grammar & Readability**
+- **Impact Improvements** (with AI-suggested rewrites for your bullet points)
+
+### 🎨 Premium Resume Templates
+Preview your generated resume data across beautifully crafted, ATS-optimized templates:
+- **Minimal:** Clean, traditional, and strictly professional.
+- **Modern:** Sleek typography with a sharp layout.
+- **Creative:** Stand out with vibrant accents (perfect for design/frontend roles).
+- **Executive:** Authoritative and structured for senior positions.
+
+### 🌗 Seamless Dark & Light Mode
+Experience a gorgeous glassmorphic UI that adapts perfectly to your environment with integrated system-theme syncing.
 
 ---
- 
-## 📂 Project Structure
-```
-├── components                # React components (Chatbot UI)
-├── pages                     # Next.js pages
-├── public                    # Public assets (images, icons, etc.)
-├── styles                    # Tailwind CSS styles
-├── backend                   # FastAPI backend for resume generation
-├── README.md                 # Project documentation (This file)
-```
- 
+
+## 🛠️ Technology Stack
+
+Techify is built for high performance and scalability using modern web technologies:
+
+* **Frontend:**
+  * **Next.js 15** (App Router, Server Components)
+  * **React 19**
+  * **Tailwind CSS 4.0** (with dark mode support)
+  * **Framer Motion** (for smooth micro-animations)
+  
+* **Backend:**
+  * **FastAPI** (High-performance Python API)
+  * **Google Gemini 2.0 Flash** (NLP intent engine & text generation)
+  * **PyMuPDF / pdfjs** (Resume parsing)
+  * **SQLite / aiosqlite** (Database)
+
+* **Authentication:**
+  * **Google OAuth 2.0**
+
 ---
- 
-## 🔧 Installation
+
+## 🚀 Getting Started
+
 ### Prerequisites
-- Node.js 18.0.0 or later
-- npm or yarn
- 
-### Setup
-1. **Clone the repository:**
+- Node.js 18+
+- Python 3.9+
+- A Google Cloud Console project (for OAuth)
+- A Google Gemini API Key
+
+### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/excute.git
-cd excute
+git clone https://github.com/Anshul253/Techify-app.git
+cd Techify-app
 ```
- 
-2. **Install dependencies:**
+
+### 2. Frontend Setup
 ```bash
+# Install dependencies
 npm install
-```
- 
-3. **Run the development server:**
-```bash
+
+# Setup environment variables (create .env.local)
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
+echo "NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id" >> .env.local
+
+# Run the Next.js development server
 npm run dev
 ```
- 
-4. **Build for production:**
+*The frontend will be running at [http://localhost:3000](http://localhost:3000)*
+
+### 3. Backend Setup
 ```bash
-npm run build
-npm run start
+cd backend
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Setup environment variables (create .env)
+echo "GEMINI_API_KEY=your_gemini_api_key" > .env
+echo "JWT_SECRET=your_super_secret_jwt_string" >> .env
+echo "GOOGLE_CLIENT_ID=your_google_client_id" >> .env
+
+# Run the FastAPI server
+uvicorn main:app --reload
 ```
- 
----
- 
-## 📌 Chatbot Interaction (Resume Generation)
-The Chatbot UI is designed to mimic a conversation where users are prompted with 10 specific questions. The answers are sent to the FastAPI backend for processing and generating a resume.
- 
-### How to Use
-- Access the chatbot interface from the homepage.
-- Answer the guided questions.
-- Generated resume data is processed by the FastAPI backend.
+*The backend API will be running at [http://localhost:8000](http://localhost:8000)*
 
 ---
 
-## 🛠️ Technologies Used
-- **Frontend:** Next.js, Tailwind CSS, React
-- **Backend:** FastAPI
-- **Deployment:** Vercel
-- **Styling:** Tailwind CSS
-
----
-
-## 💡 Future Work
-- 🌟 Improve UI/UX of the chatbot interface.
-- 📄 Implement resume download functionality (PDF, Word, etc.).
-- 📊 Enhance the resume generation model for better suggestions.
-- 🌐 Deploy a fully integrated solution with FastAPI and Next.js.
-
----
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+## 📦 Deployment Ready
+Techify is fully configured for cloud deployment:
+- **Frontend**: One-click deployable to Vercel.
+- **Backend**: Pre-configured with a `render.yaml` blueprint for instant deployment on Render.
 
 ## 🤝 Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions, issues, and feature requests are welcome! Feel free to check out the issues page.
+
+## 📄 License
+This project is licensed under the MIT License.
